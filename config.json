@@ -1,41 +1,41 @@
 {
   "Siti": {
-         "StreamingCommunity": {
-             "domain": "buzz"
+         "Comunità di streaming": {
+             "dominio": "computer"
          },
          "Filmpertutti": {
-             "domain": "diy"
+             "dominio": "fai da te"
          },
          "Tantifilm":{
-             "domain": "bond"
+             "dominio": "vincolo"
          },
-         "Mysterius":{
-             "enabled": "0"    
+         "Misterioso":{
+             "abilitato": "1"    
          },
-        "LordChannel":{
-             "domain":"com"
+        "Canale del Signore":
+             "dominio":"com"
         },
         "StreamingWatch":{
-            "domain":"org"
+            "dominio":"org"
         },
-        "AnimeWorld":{
-            "domain":"so"
+        "Mondo Anime":{
+            "dominio":"così"
         },
         "SkyStreaming":{
-            "domain":"guru"
+            "dominio":"guru"
         },
-        "DaddyLiveHD":{
-            "enabled":"1"
+        "PapàLiveHD":{
+            "abilitato":"1"
         }
  },
- "General":{
-     "load_env": "1",
+ "Generale":{
+     "load_env": "0",
      "HOST": "0.0.0.0",
-     "PORT": "8080",
-     "HF": "0",
-     "Public_Instance": "0",
+     "PORTA": "8080",
+     "HF": "1",
+     "Istanza_pubblica": "0",
      "MediaProxy": ["http://mammamia-urlo.serv00.net:1984/"],
-     "ForwardProxy": [""],
+     "Proxy di inoltro": [""],
      "Proxy": [""]
  }
 }
