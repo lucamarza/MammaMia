@@ -1,15 +1,21 @@
-# Use an official Python runtime as a parent image
 FROM python:3.10-slim-buster
+
 # Set the working directory in the container to /app
 WORKDIR /app
 
-# Copy the current directory contents into the container at /app 
-# (including run.py, filmpertutti.py, and requirements.txt)
-ADD . /app
+# Install git
+RUN apt-get update && apt-get install -y git
+
+# Clone the repository
+RUN git clone https://github.com/lucamarza/samsung .
+
+# Copy the local config.json file to the container
+
 # Install any needed packages specified in requirements.txt
 RUN pip install --no-cache-dir -r requirements.txt
-#EXPOSE the port, for now default is 8080 cause it's the only one really allowed by HuggingFace
-EXPOSE 8080
+
+
+EXPOSE 8888
 
 # Run run.py when the container launches
-CMD ["python", "run.py"]
+CMD ["uvicorn", "run:main_app", "--host", "0.0.0.0", "--port", "8888", "--workers", "4"]
